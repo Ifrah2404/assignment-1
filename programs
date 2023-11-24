@@ -1,0 +1,87 @@
+# write a python program to iterate the first 10 numbers and in each iteration print the sum of the current and previous number
+
+for i in range(1, 11):
+    if i == 1:
+    
+        a2 = i
+        a1 = 0
+    else:
+        a2 = i
+        a1 = i - 1
+
+    sum = a2 + a1
+    print(f"Iteration {i}: {a2} + {a1} = {sum}")
+
+
+# print the following pattern
+
+for i in range (6):
+    x<=5
+    x=x*i
+    print(x)
+
+
+# from the given list print i) number that is divisible of five,
+#  ii) if the number is greater than 150, then skip it and move it to the next number
+#  iii) if the number is bgreater than 500 then stop the loop
+
+L1 = [12, 75, 150, 180, 145, 525, 50]
+
+for m in L1:
+    if m % 5 == 0:
+        print("Divisible by 5: {m}")
+
+    elif m > 150:
+        print("greater than 150: {m}")
+        continue
+
+    elif m > 500:
+        print("greater than 500: {m}")
+        break
+
+# fibonacci
+
+def fib (n):
+    if n<=1:
+        return n
+    else:
+        return fib(n-1)+fib(n-2)
+    
+n=int(input("enter number: "))
+for c in range (n):
+    print (fib(i))
+
+
+#factorial
+
+numb=int(input("enter number: "))
+fact=1
+for f in range(1,numb+1):
+    fact=fact*f
+print(fact)
+
+numbers = [11, 45, 8, 11, 23, 45, 23, 45, 89]
+
+# iterate [11,45,8,11,23,45,23,45,89] print to show the occurance of each number 
+
+occurrences = {}
+for number in numbers:
+    if number in occurrences:
+        occurrences[number] += 1
+    else:
+        occurrences[number] = 1
+for number, count in occurrences.items():
+    print(f"{number}: {count}")
+
+
+#print l3 by picking odd index of l1 and even index of l2
+
+l1 = [3, 6, 9, 12, 15, 18, 21]
+l2 = [4, 8, 12, 16, 20, 24, 28]
+l3 = []
+for i in range(max(len(l1), len(l2))):
+    if i % 2 == 1 and i < len(l1):
+        l3.append(l1[i])
+    elif i % 2 == 0 and i < len(l2):
+        l3.append(l2[i])
+print("l3:", l3)
